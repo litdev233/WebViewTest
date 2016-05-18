@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_main" />
+
+    <include
+        layout="@layout/menu_left_layout"
+        android:layout_width="200dp"
+        android:id="@+id/inclde_ll_left"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+    </include>
+
+    <include
+        android:id="@+id/right_sliding"
+        layout="@layout/menu_right_layout"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+    </include>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_blue_light">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:onClick="TVBack"
+            android:text="后退"
+            android:visibility="gone"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/tv_back"
+            android:onClick="TVClose"
+            android:text="关闭"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="100"
+        android:layout_below="@id/ll_bar"
+        android:id="@+id/pb_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar"
+        />
+
+    <WebView
+        android:layout_below="@id/pb_bar"
+        android:id="@+id/wv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</RelativeLayout>
